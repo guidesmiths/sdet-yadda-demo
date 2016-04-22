@@ -7,7 +7,13 @@ module.exports = {
     "custom_assertions_path": "tests/assertions",
     "page_objects_path": "tests/pages",
     "globals_path": "",
-    "test_runner": "mocha",
+    "test_runner" : {
+        "type" : "mocha",
+        "options" : {
+            "timeout" : "10000",
+            "slow" : "5000"
+       }
+    },
 
     "selenium": {
         "start_process": true,
